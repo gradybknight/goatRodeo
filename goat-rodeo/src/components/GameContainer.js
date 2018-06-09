@@ -8,62 +8,62 @@ class GameContainer extends Component {
       {
         id:0,
         name:"g00",
-        imageLink:"./public/Assets/teeth.jpg"
+        imageLink:require("../Assets/brown.jpg")
       },
       {
         id:1,
         name:"g01",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/fence.jpg")
       },
       {
         id:2,
         name:"g02",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/hair.jpg")
       },
       {
         id:3,
         name:"g03",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/nostrils.jpg")
       },
       {
         id:4,
         name:"g04",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/smile.jpg")
       },
       {
         id:5,
         name:"g05",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/smirk.jpg")
       },
       {
         id:6,
         name:"g06",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/teeth.jpg")
       },
       {
         id:7,
         name:"g07",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/tongue.jpg")
       },
       {
         id:8,
         name:"g08",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/underbite.jpg")
       },
       {
         id:9,
         name:"g09",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/white.jpg")
       },
       {
         id:10,
         name:"g10",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/whitetongue.jpg")
       },
       {
         id:11,
         name:"g11",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:require("../Assets/yawn.jpg")
       },
 
     ],
