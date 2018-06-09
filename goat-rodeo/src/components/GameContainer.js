@@ -8,7 +8,7 @@ class GameContainer extends Component {
       {
         id:0,
         name:"g00",
-        imageLink:"511ca9eed0e80603d8a0357e5d68b90b--smile-teeth-so-funny.jpg"
+        imageLink:"./public/Assets/teeth.jpg"
       },
       {
         id:1,
