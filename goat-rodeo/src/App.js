@@ -11,7 +11,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Goat Rodeo</h1>
         </header>
-        <GameContainer />
+        <div className="row">
+          <GameContainer />
+        </div>
       </div>
     );
   }
