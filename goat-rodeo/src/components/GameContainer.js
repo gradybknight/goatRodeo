@@ -5,20 +5,7 @@ import ScoreBoard from './ScoreBoard'
 class GameContainer extends Component {
   state = {
     correctCount: 0,
-    clickedStatus: {
-      g00:false,
-      g01:false,
-      g02:false,
-      g03:false,
-      g04:false,
-      g05:false,
-      g06:false,
-      g07:false,
-      g08:false,
-      g09:false,
-      g10:false,
-      g11:false,
-    },
+    clickedGoats: [],
     currentArray: [
       {
         id:0,
@@ -210,24 +197,26 @@ class GameContainer extends Component {
       }
       return false;
     });
+    this.setState({clickedGoats:[...this.state.clickedGoats, goatName]});
     this.setState({currentArray:replacementArray});
-    console.log(this.state.currentArray)
+    this.setState({correctCount:this.state.clickedGoats.length+1});
   }
 
   handleCardClick = event => {
-    // if (this.hasTheGoatBeenClicked(event.target.name)) {
-    //   console.log("loser");
-    // } else {
-    //   console.log("change to clicked");
-    //   this.changeTheGoatToClicked(event.target.name);
-    // }
+    if (this.state.clickedGoats.includes(event.target.name)) {
+      alert(`you lost. try again`)
+      this.setState({correctCount:0});
+      this.setState({clickedGoats:[]});
+    } else {
+      this.changeTheGoatToClicked(event.target.name);
+    }
     let newArray = this.shuffle(this.state.displayArray);
     this.setState({displayArray:newArray});
   }
   render(){
     return (
       <div className="container"> 
-          <ScoreBoard correctCount={this.state.correctCount}/>
+          <ScoreBoard correctCount={this.state.correctCount} />
           <div className="row">
             <GoatDisplay currentArray={this.state.displayArray} handleCardClick={this.handleCardClick} />
           </div>
