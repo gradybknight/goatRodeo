@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ImgCard from "./ImgCard";
+import GoatDisplay from "./GoatDisplay";
 
 class GameContainer extends Component {
   state = {
@@ -101,13 +102,7 @@ class GameContainer extends Component {
     return array;
   }
   
-
-  handleCardClick = event => {
-    console.log(event.target.id);
-    let newArray = this.shuffle(this.state.currentArray);
-    this.setState({currentArray:newArray});
-  }
-  render(){
+  makeGoatDisplay = () => {
     return (
       this.state.currentArray.map(theGoat =>{
         return (
@@ -116,6 +111,24 @@ class GameContainer extends Component {
       })   
     );
   }
+
+  handleCardClick = event => {
+    console.log(event.target);
+    let newArray = this.shuffle(this.state.currentArray);
+    this.setState({currentArray:newArray});
+  }
+  render(){
+    return (
+      <div> 
+        <div className="row">
+          <h1>Your score goes here</h1>
+          <div className="row">
+            <GoatDisplay currentArray={this.state.currentArray} handleCardClick={this.handleCardClick} />
+          </div>
+        </div>
+      </div>
+    )  
+}
 }
 
 export default GameContainer;
