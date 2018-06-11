@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ImgCard from "./ImgCard";
 import GoatDisplay from "./GoatDisplay";
 import ScoreBoard from './ScoreBoard'
 
@@ -195,18 +194,21 @@ class GameContainer extends Component {
     this.state.currentArray.map(theGoat =>{
       console.log(theGoat["name"]);
       console.log(goatName);
-      // if (theGoat["name"] == goatName && theGoat["clicked"]) {
-      //   alreadyClicked=true;
-      // }
+      if (theGoat["name"] === goatName && theGoat["clicked"]) {
+        alreadyClicked=true;
+      }
+      return true;
     })
     return alreadyClicked;
   };
 
   changeTheGoatToClicked = goatName => {
     let replacementArray = this.state.currentArray.map(theGoat => {
-      if (theGoat.name == goatName) {
+      if (theGoat.name === goatName) {
         theGoat.clicked = true;
+        return true;
       }
+      return false;
     });
     this.setState({currentArray:replacementArray});
     console.log(this.state.currentArray)
